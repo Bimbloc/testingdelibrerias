@@ -18,8 +18,8 @@ int main()
     //para configurar fmod se explica cjhchi aqui 
    // https://es.stackoverflow.com/questions/607506/como-usar-fmod-en-c-con-visual-studio
     //importante no olvidar poner el lin en el input del vinculador
-    FMOD::System* system;
-    FMOD_RESULT result = FMOD::System_Create(&system);
+   // FMOD::System* system;
+    //FMOD_RESULT result = FMOD::System_Create(&system);
 
 
     //esto es un slay irrKlang manages the memory usage of sounds by itself
@@ -80,7 +80,7 @@ int main()
         engine->setListenerPosition(position, lookDirection, velPerSecond, upVector);
     }
     engine->drop(); // delete engine par aque no deje leaks
-    system->release();
+   // system->release();
     _CrtSetReportMode(_CRT_WARN, _CRTDBG_MODE_DEBUG);
     _CrtDumpMemoryLeaks();
     //return 0;
